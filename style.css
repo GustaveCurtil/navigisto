@@ -32,6 +32,17 @@ html {
     background-color: var(--color-text);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    
+    /* CRUCIAL: Stops the body from painting a solid layer over your html image */
+    background: transparent !important; 
+}
+
 /* structure */
 /* html,
 body {
