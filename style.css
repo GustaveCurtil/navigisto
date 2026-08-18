@@ -15,22 +15,6 @@ html, * {
 
 .desktop {display: none;}
 
-html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-    /* Force the canvas to expand into Safari's dynamic safe areas */
-    min-height: 100vh;
-    min-height: -webkit-fill-available; 
-    min-height: 100dvh;
-
-    /* Apply the image to the root canvas */
-    background-image: url('/media/hero_afbeelding.png');
-    background-position: 74% center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Required: tells the engine to paint into unsafe corners */
-}
 
 /* structure */
 
@@ -40,7 +24,12 @@ body {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
     width: 100vw;
+    height: 100svh;
     overflow-x: hidden;
+    background-image: url('media/hero_afbeelding.png');
+    background-position-x: 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 div.hero {
