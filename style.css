@@ -1,0 +1,35 @@
+html, * {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-light: #F8FAFC ;
+    --color-dark: #012559;
+}
+
+div.hero {
+    height: 100dvh;
+
+    background-image: url('/media/hero_afbeelding.png');
+    background-position: 80%;
+
+    color: var(--color-light);
+    background-color: var(--color-dark);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div.title {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
