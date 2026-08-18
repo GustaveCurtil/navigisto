@@ -25,6 +25,7 @@ div.hero {
     top: calc(-100svh);
     width: 100vw;
     height: calc(100svh + var(--height-header));
+    height: -webkit-fill-available;
 }
 
 div.hero>img {
