@@ -20,7 +20,6 @@ html, * {
 body {
     overflow-x: hidden;
     width: 100vw;
-    min-height: 100svh;
     background: var(--color-light);
 }
 
@@ -40,8 +39,8 @@ body>header {
 
 
 div.hero {
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     background-image: url('media/hero_afbeelding.png');
     background-position: 75% center;
     background-size: cover;
@@ -75,7 +74,6 @@ div.hero>section {
 
 div.hero>header {
     color: var(--color-light);
-    height: var(--height-header);
     width: 100%;
     display: flex;
     align-items: center;
@@ -103,5 +101,5 @@ header nav ul {
 }
 
 main {
-    padding-top: calc(100lvh);
+    padding-top: calc(100vh);
 }
