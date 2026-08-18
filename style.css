@@ -14,34 +14,9 @@ html, * {
 /* main shit */
 
 .desktop {display: none;}
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100dvh;
-    min-height: -webkit-fill-available;
-}
-
-/* Create a standalone background canvas layer */
-html::before {
-    content: "";
-    position: fixed;
-    /* Using physical viewport percentages forces Safari to break past safe limits */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh; 
-    z-index: -1;
-    
-    background-image: url('/media/hero_afbeelding.png');
-    background-position: 74% center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--color-text);
-}
 
 /* structure */
-/* html,
+html,
 body {
     margin: 0;
     width: 100vw;
@@ -131,4 +106,4 @@ div.hero>header {
 
 main {
     padding-bottom: var(--height-header);
-} */
+}
