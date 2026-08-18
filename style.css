@@ -29,7 +29,6 @@ html {
     background-position: 74% center;
     background-repeat: no-repeat;
     background-size: cover; /* Required: tells the engine to paint into unsafe corners */
-    background-color: var(--color-text);
 }
 
 body {
