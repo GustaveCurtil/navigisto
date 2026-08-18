@@ -25,7 +25,8 @@ body {
     background-image: url('/media/hero_afbeelding.png');
     background-position-x: 74%;
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: 100vw 100vdh;
+    background-color: var(--color-text);
 
 }
 

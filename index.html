@@ -68,4 +68,25 @@
 
     
 </body>
+<script>
+    let background = UIView()
+background.translatesAutoresizingMaskIntoConstraints = false
+background.backgroundColor = .red
+view.addSubview(background)
+
+let foreground = UIView()
+foreground.translatesAutoresizingMaskIntoConstraints = false
+foreground.backgroundColor = .blue
+view.addSubview(foreground)
+
+background.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+background.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+background.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+background.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
+foreground.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+foreground.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+foreground.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+foreground.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+</script>
 </html>
