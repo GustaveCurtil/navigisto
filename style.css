@@ -1,36 +1,76 @@
-html, * {
-    padding: 0;
-    margin: 0;
-}
+html, * {padding: 0; margin: 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
 :root {
+    --color-text: #2D2D2D;
     --color-light: #F8FAFC ;
     --color-dark: #012559;
+    --height-header: 5rem;
 }
+
+/* main shit */
+
+.desktop {display: none;}
+
+
+/* structure */
 
 body{
     width: 100vw;
-    max-width: 100vw;
     overflow-x: hidden;
-    overflow-y: auto;
+    background-color: var(--color-light);
 }
 
 div.hero {
-    width: 100%;
-    height: 100dvh;
-    max-height: 100dvh;
+    position: sticky;
+    top: calc(-100svh);
+    width: 100vw;
+    height: calc(100svh + var(--height-header));
+}
 
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
+div.hero>img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: 74%;
+}
 
-    background-image: url('/media/hero_afbeelding.png');
-    background-position: 85%;
+div.hero>.content {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100svh;
+    max-height: 100svh;
+
+    z-index: 9999;
 
     color: var(--color-light);
-    background-color: var(--color-dark);
+}
+
+div.hero>.content>section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#slogan {
+    font-size: 3rem;
+    max-width: 360px;
+    padding: 1rem;
+}
+#introduction {
+    font-size: 1.4rem;
+    max-width: 360px;
+    padding: 1rem;
 }
 
 header {
+    color: var(--color-light);
+    height: var(--height-header);
     width: 100%;
     display: flex;
     align-items: center;
@@ -45,4 +85,13 @@ header div.title {
 header nav ul {
     list-style: none;
     display: flex;
+}
+
+div.hero>header {
+    position: absolute;
+    bottom: 0;
+}
+
+main {
+    padding-bottom: var(--height-header);
 }
