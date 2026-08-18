@@ -26,7 +26,8 @@ body {
 }
 
 body {
-    min-height: 100dvh;
+  min-height: 100svh;
+  min-height: 100dvh;
     overflow-x: hidden;
 
     background-image: url('media/hero_afbeelding.png');
@@ -35,10 +36,10 @@ body {
     background-repeat: no-repeat;
 }
 
-div.hero {
+/* div.hero {
     width: 100vw;
     height: calc(100lvh + var(--height-header));
-}
+} */
 
 div.hero>img {
     width: 100vw;
