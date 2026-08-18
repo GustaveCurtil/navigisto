@@ -30,7 +30,6 @@ header {
 
 body>header {
     width: 100%;
-    
     position: sticky;
     top: 0; 
     color: var(--color-dark);
@@ -40,7 +39,7 @@ body>header {
 
 div.hero {
     width: 100vw;
-    height: 100vh;
+    height: calc(100lvh + env(safe-area-inset-top) + env(safe-area-inset-bottom));
     min-height: 100lvh;
 
     background-image: url('media/hero_afbeelding.png');
