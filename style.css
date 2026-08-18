@@ -41,6 +41,8 @@ body>header {
 div.hero {
     width: 100vw;
     height: 100vh;
+    min-height: 100lvh;
+
     background-image: url('media/hero_afbeelding.png');
     background-position: 75% center;
     background-size: cover;
