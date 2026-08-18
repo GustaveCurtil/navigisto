@@ -7,7 +7,7 @@ html, * {
 :root {
     --color-text: #2D2D2D;
     --color-light: #F8FAFC ;
-    --color-accent: #3d4e64;
+    --color-accent: #E2EEF8;
     --color-dark: #012559;
     --height-header: 5rem;
 }
@@ -34,7 +34,7 @@ body>header {
     
     position: sticky;
     top: 0; 
-
+    color: var(--color-dark);
     background-color: var(--color-accent);
 }
 
@@ -85,6 +85,16 @@ div.hero>header {
 header div.title {
     display: flex;
     align-items: center;
+}
+
+h1 {
+    padding-bottom: 0.4rem;
+}
+
+header div.title img {
+    display: block;
+    height: 4rem;
+    padding-right: 0.4rem;
 }
 
 header nav ul {
