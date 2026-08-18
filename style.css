@@ -26,7 +26,7 @@ body {
 }
 
 body {
-    height: 100dvh;
+    min-height: 100dvh;
     overflow-x: hidden;
 
     background-image: url('media/hero_afbeelding.png');
