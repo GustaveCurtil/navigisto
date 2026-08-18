@@ -30,7 +30,6 @@ html {
     background-position: 74% center;
     background-repeat: no-repeat;
     background-size: cover; /* Required: tells the engine to paint into unsafe corners */
-    background-color: var(--color-text);
 }
 
 /* structure */
@@ -51,7 +50,6 @@ div.hero {
     padding-right: env(safe-area-inset-right);
     width: 100vw;
     height: calc(100lvh + var(--height-header));
-    background-color: rgba(255, 255, 0, 0.552);
 }
 
 div.hero>img {
