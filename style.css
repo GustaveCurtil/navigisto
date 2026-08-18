@@ -39,8 +39,8 @@ body>header {
 
 div.hero {
     width: 100vw;
-    height: calc(100lvh + env(safe-area-inset-top) + env(safe-area-inset-bottom));
-    min-height: 100lvh;
+    height: calc(100lvh + env(safe-area-inset-bottom));
+    min-height:calc(100lvh + env(safe-area-inset-bottom));
 
     background-image: url('media/hero_afbeelding.png');
     background-position: 75% center;
