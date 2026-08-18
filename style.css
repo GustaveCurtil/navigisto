@@ -17,17 +17,20 @@ html, * {
 
 
 /* structure */
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background: var(--color-light);
+}
 
 body {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-    width: 100vw;
-    height: 100svh;
+    height: 100dvh;
     overflow-x: hidden;
+
     background-image: url('media/hero_afbeelding.png');
-    background-position-x: 75%;
+    background-position: 75% center;
     background-size: cover;
     background-repeat: no-repeat;
 }
