@@ -7,6 +7,7 @@ html, * {
 :root {
     --color-text: #2D2D2D;
     --color-light: #F8FAFC ;
+    --color-accent: #4d5c6d;
     --color-dark: #012559;
     --height-header: 5rem;
 }
@@ -34,7 +35,7 @@ body>header {
     position: sticky;
     top: 0; 
 
-    background-color: var(--color-dark);
+    background-color: var(--color-accent);
 }
 
 
