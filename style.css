@@ -17,10 +17,24 @@ html, * {
 
 /* structure */
 body {
-    margin: 0;
+    overflow-x: hidden;
     width: 100vw;
     min-height: 100svh;
     background: var(--color-light);
+}
+
+header {
+    height: var(--height-header);
+    color: var(--color-light);
+}
+
+body>header {
+    width: 100%;
+    
+    position: sticky;
+    top: 0; 
+
+    background-color: var(--color-dark);
 }
 
 
@@ -31,32 +45,16 @@ div.hero {
     background-position: 75% center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-div.hero>img {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    object-position: 74%;
-}
-
-div.hero>.content {
+    z-index: 9999;
     position: absolute;
-    top: 0;
 
     display: flex;
     flex-direction: column;
 
-    width: 100vw;
-    height: 100svh;
-    max-height: 100svh;
-
-    z-index: 9999;
-
-    color: var(--color-light);
+     color: var(--color-light);
 }
 
-div.hero>.content>section {
+div.hero>section {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -74,7 +72,7 @@ div.hero>.content>section {
     padding: 1rem;
 }
 
-header {
+div.hero>header {
     color: var(--color-light);
     height: var(--height-header);
     width: 100%;
@@ -93,11 +91,6 @@ header nav ul {
     display: flex;
 }
 
-div.hero>header {
-    position: absolute;
-    bottom: 0;
-}
-
 main {
-    padding-bottom: var(--height-header);
+    padding-top: calc(100lvh);
 }
