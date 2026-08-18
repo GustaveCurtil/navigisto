@@ -39,10 +39,8 @@ body {
     margin: 0;
     width: 100vw;
     overflow-x: hidden;
-    background-image: url('/media/hero_afbeelding.png');
     background-position-x: 74%;
     background-repeat: no-repeat;
-    background-color: var(--color-text);
 
 }
 
