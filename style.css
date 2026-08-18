@@ -29,19 +29,19 @@ header {
     color: var(--color-light);
 }
 
-body>header {
+.wrapper {
+    position: relative;
+}
+.wrapper>header {
     width: 100%;
     position: sticky;
     top: 0; 
-    color: var(--color-dark);
-    background-color: var(--color-accent);
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    opacity: 0;
 }
 
-.header-filler {
-    width: 100%;
-    height: var(--height-header);
-    background-color: var(--color-accent);
-}
+
 
 
 div.hero {
@@ -53,7 +53,6 @@ div.hero {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 9999;
-    position: absolute;
 
     display: flex;
     flex-direction: column;
@@ -108,5 +107,5 @@ header nav ul {
 }
 
 main {
-    padding-top: calc(100svh - var(--height-header));
+    padding-bottom: calc(100svh);
 }
