@@ -24,11 +24,11 @@ html, * {
 h1 {font-family: "Poppins", sans-serif; padding-bottom: 0.1rem;}
 header * {font-family: "Poppins", sans-serif;}
 .desktop {display: none;}
-p {font-size: 1.1rem;}
+p {font-size: 1.2rem;}
 img {max-width: 100%;}
-a {color: var(--color-dark); text-underline-offset: 0.4rem; text-decoration-thickness: 1px; 
+a, header button {color: var(--color-dark); text-underline-offset: 0.4rem; text-decoration-thickness: 1px; 
     transition: text-underline-offset 0.2s ease-in-out;}
-a:hover {text-underline-offset: 0.2rem;}
+a:hover, header button:hover {text-underline-offset: 0.2rem;}
 header a {color: var(--color-light);}
 @media screen and (min-width: 900px) {
     .mobile {display: none;}
@@ -131,8 +131,9 @@ body {
     opacity: 0.8;
     transition: opacity 0.2s ease-in-out;  
 }
-.wrapper .arrow {
-
+footer .arrow {
+    top: 50%;
+    transform: translateY(50%);
     rotate: 180deg;
 }
 .arrow:hover {
@@ -243,7 +244,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
     .desktop {display: flex;}
 
     h2 {text-align: left;}
@@ -265,8 +266,11 @@ h2 {
 .cards article {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
     container-type: size;
+}
+
+.cards .title, .cards .content {
+    padding: 4cqw;
 }
 
 .cards.sectoren .title {
@@ -281,30 +285,49 @@ h2 {
     padding-right: calc(4cqw / 2);
 }
 
-.title h3 {
+.cards.sectoren h3 {
     font-size: min(8cqw, 2rem);
+}
+.cards.diensten h3 {
+    font-size: min(7cqw, 2rem);
+}
+
+.cards.diensten div.title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cards.sectoren article div.content {
     padding: 4cqw;
-    line-height: 5cqw;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+
 div.content>p:first-of-type {
+    line-height: 5cqw;
         display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .content * {
-    font-size: min(5cqw);
+    font-size: max(5cqw, 1rem);
 }
+.cards.diensten img {
+    height: 60%;
+    width: 100%;
+}
+.cards.diensten {
+    text-align: center;
+}
+
+
 
 
 section#over h2 {
