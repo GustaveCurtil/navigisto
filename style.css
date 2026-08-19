@@ -15,12 +15,73 @@ html, * {
     --gap-medium : 2rem;
 }
 
+
 /* main shit */
 
 .desktop {display: none;}
 p {font-size: 1.1rem;}
-
 img {max-width: 100%;}
+
+@media screen and (min-width: 900px) {
+    .mobile {display: none;}
+    .desktop {display: flex;}
+}
+
+
+/* navigatie */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--gap-side);
+    height: var(--height-header);
+    color: var(--color-light);
+    align-items: center;
+}
+.wrapper>header {
+    position: fixed;
+    top: 0; 
+    background-color: var(--color-dark);
+    display: none;
+}
+header div.title {
+    display: flex;
+    align-items: center;
+}
+header div.title img {
+    display: block;
+    height: 4rem;
+    padding-right: 0.4rem;
+}
+nav ul {
+    list-style: none;
+}
+header nav ul {
+    font-size: 1.6rem;
+    display: flex;
+    gap: var(--gap-small);
+}
+
+div#menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--color-light);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+div#menu>button {
+    position: fixed;
+    top: var(--gap-side);
+    right: var(--gap-side);
+
+    width: 10%;
+    aspect-ratio: 1/1;
+}
+
 
 /* structure */
 body {
@@ -41,24 +102,9 @@ body {
     
 }
 
-header {
-    height: var(--height-header);
-    color: var(--color-light);
-}
-
 .wrapper {
     position: relative;
 }
-.wrapper>header {
-    width: 100%;
-    position: fixed;
-    top: 0; 
-    color: var(--color-light);
-    background-color: var(--color-dark);
-    display: none;
-}
-
-
 
 
 div.hero {
@@ -95,32 +141,8 @@ div.hero>section {
     padding: var(--gap-small) var(--gap-side);
 }
 
-div.hero>header {
-    color: var(--color-light);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header div.title {
-    display: flex;
-    align-items: center;
-}
-
 h1 {
     padding-bottom: 0.2rem;
-}
-
-header div.title img {
-    display: block;
-    height: 4rem;
-    padding-right: 0.4rem;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
 }
 
 main {
@@ -186,6 +208,8 @@ h2 {
 }
 
 @media screen and (min-width: 900px) {
+    .desktop {display: flex;}
+
     h2 {text-align: left;}
     .cards, .cards.diensten {
         display: flex;

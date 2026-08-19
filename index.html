@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="style.css">
+    <script src="mobile-menu.js" defer></script>
     <title>Navigisto</title>
 </head>
 <body>
@@ -13,14 +14,17 @@
                 <img src="/media/logo.png" alt="logo" title="logo">
                 <h1>navigisto</h1>
             </div>
-            <nav>
-                <ul class="desktop">
+            <nav class="desktop">
+                <ul>
                     <li>Home</li>
                     <li>Over ons</li>
                     <li>Sectoren</li>
                     <li>Diensten</li>
                     <li>Contact</li>
                 </ul>
+            </nav>
+            <nav class="mobile">
+                <button class="open-menu">menu</button>
             </nav>
         </header>
         <section>
@@ -40,14 +44,17 @@
                 <img src="/media/logo.png" alt="logo" title="logo">
                 <h1>navigisto</h1>
             </div>
-            <nav>
-                <ul class="desktop">
-                    <li>Homesssss</li>
+            <nav class="desktop">
+                <ul>
+                    <li>Home</li>
                     <li>Over ons</li>
                     <li>Sectoren</li>
                     <li>Diensten</li>
                     <li>Contact</li>
                 </ul>
+            </nav>
+            <nav class="mobile">
+                <button class="open-menu">menu</button>
             </nav>
         </header>
         
@@ -82,8 +89,19 @@
             <p>Footer with some text</p>
         </footer>        
     </div>
+    <div id="menu">
+        <button>x</button>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Over ons</li>
+                <li>Sectoren</li>
+                <li>Diensten</li>
+                <li>Contact</li>
+            </ul>            
+        </nav>
 
-      
+    </div>
 
     
 </body>
