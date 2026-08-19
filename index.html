@@ -16,11 +16,11 @@
             </div>
             <nav class="desktop">
                 <ul>
-                    <li>Home</li>
-                    <li>Over ons</li>
-                    <li>Sectoren</li>
-                    <li>Diensten</li>
-                    <li>Contact</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Over ons</a></li>
+                    <li><a href="">Sectoren</a></li>
+                    <li><a href="">Diensten</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
             </nav>
             <nav class="mobile">
@@ -32,7 +32,7 @@
                 <p id="introduction">Met jarenlange ervaring in bouw, industrie, maritieme en logistieke sectoren helpt Navigisto organisaties hun strategie om te zetten in tastbare resultaten.</p>
             
         </section>
-        <div id="arrow">
+        <div class="arrow">
             <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M28 0C43.464 0 56 12.536 56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0ZM27.207 20.667L15 11.5957L27.4971 45.2197L40.2148 11L27.207 20.667Z" fill="var(--color-light)"/>
             </svg>
@@ -46,11 +46,11 @@
             </div>
             <nav class="desktop">
                 <ul>
-                    <li>Home</li>
-                    <li>Over ons</li>
-                    <li>Sectoren</li>
-                    <li>Diensten</li>
-                    <li>Contact</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Over ons</a></li>
+                    <li><a href="">Sectoren</a></li>
+                    <li><a href="">Diensten</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
             </nav>
             <nav class="mobile">
@@ -87,22 +87,26 @@
         </main>
         <footer>
             <p>Footer with some text</p>
-        </footer>        
+                    <div class="arrow">
+            <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 0C43.464 0 56 12.536 56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0ZM27.207 20.667L15 11.5957L27.4971 45.2197L40.2148 11L27.207 20.667Z" fill="var(--color-light)"/>
+            </svg>
+        </div> 
+        </footer>     
     </div>
+
     <div id="menu">
         <button>x</button>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Over ons</li>
-                <li>Sectoren</li>
-                <li>Diensten</li>
-                <li>Contact</li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Over ons</a></li>
+                <li><a href="">Sectoren</a></li>
+                <li><a href="">Diensten</a></li>
+                <li><a href="">Contact</a></li>
             </ul>            
         </nav>
-
     </div>
-
     
 </body>
 <script>
@@ -134,13 +138,20 @@
         }
     });
 
-    const arrow = document.querySelector('#arrow');
+    const arrowDown = document.querySelector('.hero .arrow');
+    const arrowUp = document.querySelector('footer .arrow');
 
-    arrow.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-    });
+    arrowDown.addEventListener('click', () => {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    })
+    arrowUp.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     })
 </script>
 </html>
