@@ -10,6 +10,9 @@ html, * {
     --color-accent: #E2EEF8;
     --color-dark: #012559;
     --height-header: 5rem;
+    --gap-side: 2rem;
+    --gap-small: 1rem;
+    --gap-medium : 2rem;
 }
 
 /* main shit */
@@ -24,6 +27,17 @@ body {
     background: var(--color-light);
 }
 
+#arrow {
+    position: absolute;
+    bottom: var(--gap-side);
+    right: var(--gap-side);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    opacity: 0.8;
+    
+}
+
 header {
     height: var(--height-header);
     color: var(--color-light);
@@ -34,11 +48,11 @@ header {
 }
 .wrapper>header {
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0; 
     color: var(--color-light);
     background-color: var(--color-dark);
-    opacity: 0;
+    display: none;
 }
 
 
@@ -70,12 +84,12 @@ div.hero>section {
 #slogan {
     font-size: 3rem;
     max-width: 360px;
-    padding: 1rem;
+    padding: var(--gap-small) var(--gap-side);
 }
 #introduction {
     font-size: 1.4rem;
     max-width: 360px;
-    padding: 1rem;
+    padding: var(--gap-small) var(--gap-side);
 }
 
 div.hero>header {
@@ -107,5 +121,66 @@ header nav ul {
 }
 
 main {
+    padding-top: calc(var(--gap-medium) + var(--height-header));
     padding-bottom: calc(100svh);
+    padding-left: var(--gap-side);
+    padding-right: var(--gap-side);
+}
+
+section {
+    padding: var(--gap-medium) 0;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-bottom: var(--gap-medium);
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-small);
+}
+
+.cards>article {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 18/10;
+
+    color: var(--color-light);
+    background-color: var(--color-dark);
+}
+
+.cards.diensten>article {
+    aspect-ratio: 1/1;
+}
+
+@media screen and (min-width: 660px) {
+    .cards.diensten {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cards.diensten>article {
+        width: calc((100% - var(--gap-small)) / 2);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    h2 {text-align: left;}
+    .cards, .cards.diensten {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: var(--gap-small);
+    }
+
+    .cards>article {
+        width: 100%;
+        max-width: none;
+        color: var(--color-light);
+        background-color: var(--color-dark);
+    }
 }

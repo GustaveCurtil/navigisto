@@ -27,7 +27,12 @@
                 <p id="slogan">Navigating organistions trough business expansion</p>
                 <p id="introduction">Met jarenlange ervaring in bouw, industrie, maritieme en logistieke sectoren helpt Navigisto organisaties hun strategie om te zetten in tastbare resultaten.</p>
             
-        </section>      
+        </section>
+        <div id="arrow">
+            <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 0C43.464 0 56 12.536 56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0ZM27.207 20.667L15 11.5957L27.4971 45.2197L40.2148 11L27.207 20.667Z" fill="var(--color-light)"/>
+            </svg>
+        </div>      
     </div>
     <div class="wrapper">
         <header>
@@ -48,27 +53,21 @@
         
         <main>
             <section>
-                <h2>Sectorens</h2>
-                <p>blablablabalah</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-            <p>blablablabalah</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-            <p>blablablabalah</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-            <p>blablablabalah</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-            <p>blablablabalah</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sint obcaecati amet culpa error maxime quod, aspernatur quidem consequatur animi odit dolorem id consequuntur dicta in. Nisi itaque voluptate suscipit.</p>
+                <h2>Sectoren</h2>
+                <div class="cards sectoren">
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </div>
+            </section>
+            <section>
+                <h2>Diensten</h2>
+                <div class="cards diensten">
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </div>
             </section>
         </main>        
     </div>
@@ -79,9 +78,10 @@
 </body>
 <script>
     const stickyHeader = document.querySelector('.wrapper > header');
+    const main = document.querySelector('main');
 
     window.addEventListener('scroll', () => {
-        const rect = stickyHeader.getBoundingClientRect();
+        const rect = main.getBoundingClientRect();
         const height = parseFloat(
             getComputedStyle(document.documentElement)
                 .getPropertyValue('--height-header')
@@ -89,14 +89,29 @@
 
         // Start when the header touches the top,
         // become fully visible after `height` pixels.
-        const progress = Math.min(
-            1,
-            Math.max(0, (height - rect.top) / (height))
-        );
+        // const progress = Math.min(
+        //     1,
+        //     Math.max(0, (height - rect.top) / (height))
+        // );
 
-        console.log(rect.top)
+        // console.log(rect.top)
 
-        stickyHeader.style.opacity = progress;
+        // stickyHeader.style.opacity = progress;
+
+        if (rect.top + height <= height) {
+            stickyHeader.style.display = 'flex';
+        } else {
+            stickyHeader.style.display = 'none';
+        }
     });
+
+    const arrow = document.querySelector('#arrow');
+
+    arrow.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+    })
 </script>
 </html>
